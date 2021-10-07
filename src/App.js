@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import Dashboard from './Dashboard';
-import loader from './asset/loading.gif';
+
 
   
 function App() {
@@ -57,7 +57,7 @@ const inputHandler=(e)=>{
      
      {myIp!==null?<div className="data-card">
       <Dashboard detail={myIp} name={name}></Dashboard>
-     </div>:toDisplay?null:<img width="100px" src={loader} alt="loading"/>}
+     </div>:toDisplay?null:<h2>Loading...</h2>}
      </div>
 
      <footer className="foot">Build with ⌨ and 💛 by DC</footer>
