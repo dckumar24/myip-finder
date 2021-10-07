@@ -45,7 +45,7 @@ const inputHandler=(e)=>{
     <div className="App">
       {myIp!==null?<h2 className="note">Hello {name}😎</h2>:null}
       
-      (<div className="container">
+      <div className="container">
      {myIp===null?(<div className="login-card">
      <form onSubmit={loginHandler}>
        Name<br/>
