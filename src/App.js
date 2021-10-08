@@ -15,7 +15,10 @@ function App() {
       const {name,ip}=JSON.parse(loggedIn);
       fetch('https://api.ipgeolocation.io/ipgeo?apiKey=a155bf40dee249f28b966a7e169d368c&ip='+ip)
       .then((response)=>response.json())
-      .then((data)=>{setMyIp(data);setToDisplay(true); setName(name) ;console.log(ip)});
+      .then((data)=>{setMyIp(data);setToDisplay(true)
+        setName(name) ;console.log(ip)})
+        .catch((error)=>{console.log(error)}); 
+      
     }
   },[]);  
 
@@ -25,9 +28,12 @@ setToDisplay(false);
 
     fetch('https://api.ipgeolocation.io/ipgeo?apiKey=a155bf40dee249f28b966a7e169d368c')
     .then((response)=>response.json())
-    .then((data)=>{setMyIp(data);setToDisplay(true);
+    .then((data)=>{
+      setMyIp(data);
+      setToDisplay(true);
     localStorage.setItem('MYIP',JSON.stringify({name:name,ip:data.ip}))
-    });
+    })
+    .catch((error)=>{console.log(error)});
 
     // const clearData=setInterval(()=>{
     //   if(toDisplay===true){
@@ -48,10 +54,10 @@ const inputHandler=(e)=>{
       <div className="container">
      {myIp===null?(<div className="login-card">
      <form onSubmit={loginHandler}>
-       Name<br/>
-       <input onChange={inputHandler} value={name} placeholder="Enter the name"></input>
+       User Name<br/>
+       <input  className="user-input" autoFocus onChange={inputHandler} value={name} placeholder="Enter the name"></input>
        <br/>
-       <button className="login_button" type="submit" disabled={!(name&&name.length>5)}>Find My IP</button>
+       <button className="login-button" type="submit" disabled={!(name&&name.length>5)}>Find My IP</button>
        </form>
      </div>):null}
      

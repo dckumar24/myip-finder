@@ -15,7 +15,7 @@
 .login-card{
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: larger;
+  font-size: 50px;
   font-weight: bold;
   color:yellow;
   display:flex;
@@ -25,11 +25,18 @@
   text-align:center;
   width: 30%;
   height: 200px;
-  background: url('./asset/spider.gif') ;
+ background-color: rgb(5, 5, 80) ;
   /* background: rgba(12, 0, 13, 0.34); */
   box-shadow: 5px 5px 5px #000000;
-  border-radius: 10px;
+  border-radius: 50px;
 }
+.user-input{
+  font-size: 30px;
+  background-color: lightcyan;
+  border-radius: 10px;
+  color:rgb(5, 5, 80);
+}
+
 .data-card{
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -39,13 +46,15 @@
   text-align:center;
  /* margin: auto; */
   width: 554px;
-  height: 100%;
-  
-
-  
+  height: 100%;  
   background: rgba(7, 0, 0, 0.575);
   box-shadow: 5px 5px 5px #000000;
   border-radius: 10px;
+}
+.login-button{
+  font-size: 25px;
+  width:50%;
+
 }
 .note{
   text-align: center;
@@ -61,8 +70,8 @@
 }
 .foot{
 
-  background-color:rgba(0, 0, 0, 0.726);
-  color:yellow;
+  background-color:rgba(231, 50, 50, 0.726);
+  color:black;
   font-weight:normal;
   font-style: italic;
   width:100%;
@@ -105,7 +114,7 @@ margin-bottom:3px;
     height: 150px;
     margin:15px;
     
-    background-image: url('./asset/spider.gif');
+    background-color: brown;
     /* background: rgba(12, 0, 13, 0.34); */
     box-shadow: 5px 5px 5px #000000;
     border-radius: 10px;
@@ -141,8 +150,8 @@ margin-bottom:3px;
   }
   .foot{
 
-  background-color:rgba(0, 0, 0, 0.726);
-  color:yellow;
+  background-color:rgba(218, 46, 46, 0.726);
+  color:black;
   font-weight:normal;
   font-style: italic;
   width:100%;
